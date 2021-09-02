@@ -1,0 +1,37 @@
+---
+- title: fancy-regex
+  description: JS/TS regexes with whitespace, comments, and interpolation!
+  repo_url: https://github.com/clearlylocal/fancy-regex
+  pages_url: 
+  updated_at: '2021-03-05T21:45:25Z'
+- title: browser-extension-url-match
+  description: Robust, configurable URL pattern matching, as used by Chrome and Firefox
+    browser extensions.
+  repo_url: https://github.com/clearlylocal/browser-extension-url-match
+  pages_url: 
+  updated_at: '2021-08-07T08:49:58Z'
+- title: untranslated-detector
+  description: 
+  repo_url: https://github.com/clearlylocal/untranslated-detector
+  pages_url: https://clearlylocal.github.io/untranslated-detector
+  updated_at: '2021-05-24T15:21:34Z'
+- title: subtitle-concatenator
+  description: 
+  repo_url: https://github.com/clearlylocal/subtitle-concatenator
+  pages_url: https://clearlylocal.github.io/subtitle-concatenator
+  updated_at: '2021-08-27T00:25:13Z'
+- title: jekyll-doc-basic-demo
+  description: 
+  repo_url: https://github.com/clearlylocal/jekyll-doc-basic-demo
+  pages_url: https://clearlylocal.github.io/jekyll-doc-basic-demo
+  updated_at: '2021-07-22T08:08:02Z'
+- title: text-fragment-editor
+  description: 
+  repo_url: https://github.com/clearlylocal/text-fragment-editor
+  pages_url: https://clearlylocal.github.io/text-fragment-editor
+  updated_at: '2021-08-10T21:19:32Z'
+- title: substitute-variations
+  description: 
+  repo_url: https://github.com/clearlylocal/substitute-variations
+  pages_url: https://clearlylocal.github.io/substitute-variations
+  updated_at: '2021-09-01T01:08:36Z'
