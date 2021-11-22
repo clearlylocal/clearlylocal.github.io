@@ -59,6 +59,7 @@ code {
 	width: 21px;
 }
 
-a, a:visited {
-	color: var(--color-secondary-medium);
+a,
+a:visited {
+	color: var(--color-primary-darker);
 }

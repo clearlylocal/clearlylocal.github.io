@@ -21,18 +21,18 @@
 title: Clearly Local GitHub Portal
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  GitHub portal for Clearly Local public repos, tools, and apps.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+    GitHub portal for Clearly Local public repos, tools, and apps.
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://clearlylocal.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:  clearlylocal
+github_username: clearlylocal
 
 show_excerpts: true
 
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
+    - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -55,9 +55,16 @@ plugins:
 #   - vendor/ruby/
 
 kramdown:
-  input: GFM
+    input: GFM
 
 permalink: /:categories/:title
 
 header_pages:
-- about.md
+    - user_scripts/index.md
+    - about.md
+
+defaults:
+    - scope:
+          path: 'user_scripts'
+      values:
+          layout: 'user_script'

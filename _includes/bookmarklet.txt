@@ -1,0 +1,7 @@
+;(() => {
+{{include.content}}
+
+if (typeof __main__ !== 'undefined' && __main__ !== window.__main__) {
+	__main__()
+}
+})()

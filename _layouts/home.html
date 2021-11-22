@@ -4,43 +4,41 @@ layout: default
 
 <div class="home">
 	{%- if page.title -%}
-		<h1 class="page-heading">{{ page.title }}</h1>
+	<h1 class="page-heading">{{ page.title }}</h1>
+	{%- endif -%} {{ content }} {%- assign posts = site.data.repos | sort:
+	"updated_at" | reverse -%} {%- if posts.size > 0 -%} {%- if page.list_title
+	-%}
+	<h2 class="post-list-heading">{{ page.list_title }}</h2>
 	{%- endif -%}
+	<ul class="post-list">
+		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
+		-%} {%- for post in posts -%}
+		<li>
+			<span class="post-meta"
+				>Last updated {{ post.updated_at | date: date_format }}</span
+			>
+			<h3>
+				{{- post.title | escape }} · {% if post.repo_url -%}
+				<a
+					href="{{ post.repo_url }}"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Code</a
+				>
+				{%- endif %} {% if post.pages_url -%} ·
+				<a
+					href="{{ post.pages_url }}"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Live<span aria-hidden="true">✨</span></a
+				>
+				{%- endif -%}
+			</h3>
 
-{{ content }}
-
-{%- assign posts = site.data.repos | sort: "updated_at" | reverse -%}
-
-{%- if posts.size > 0 -%}
-	{%- if page.list_title -%}
-		<h2 class="post-list-heading">{{ page.list_title }}</h2>
-	{%- endif -%}
-		<ul class="post-list">
-			{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-			{%- for post in posts -%}
-				<li>
-					<span class="post-meta">Last updated {{ post.updated_at | date: date_format }}</span>
-					<h3>
-						{{- post.title | escape }}
-
-						·
-
-						{% if post.repo_url -%}
-							<a href="{{ post.repo_url }}" target="_blank" rel="noopener noreferrer">Code</a>
-						{%- endif %}
-
-						{% if post.pages_url -%}
-							·
-							<a href="{{ post.pages_url }}" target="_blank" rel="noopener noreferrer">Live<span aria-hidden="true">✨</span></a>
-						{%- endif -%}
-					</h3>
-
-					{%- if site.show_excerpts -%}
-						{{ post.description | escape }}
-					{%- endif -%}
-
-				</li>
-			{%- endfor -%}
-		</ul>
+			{%- if site.show_excerpts -%} {{ post.description | escape }} {%-
+			endif -%}
+		</li>
+		{%- endfor -%}
+	</ul>
 	{%- endif -%}
 </div>
