@@ -1,4 +1,3 @@
-const extensions = ['jpg', 'jpeg', 'jp2', 'png', 'webp', 'gif', 'svg']
 const container = document.createElement('div')
 const img = document.createElement('img')
 
@@ -8,12 +7,14 @@ const toCssText = (obj) =>
 		.join(' ')
 
 container.style.cssText = toCssText({
+	top: 0,
+	right: 0,
+	margin: 0,
+	padding: 0,
 	position: 'fixed',
 	border: '1px solid #ddd',
 	filter: 'drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2))',
-	margin: '0',
 	'box-sizing': 'border-box',
-	padding: '0',
 	'pointer-events': 'none',
 	'z-index': Number.MAX_SAFE_INTEGER,
 	background: 'aquamarine',
@@ -47,10 +48,6 @@ const attachListeners = (window) => {
 			return
 		}
 
-		const pattern = {
-			test: (str) => extensions.includes(str.split('.').slice(-1)[0]),
-		}
-
 		const segments =
 			e.target instanceof window.HTMLAnchorElement
 				? [e.target.href]
@@ -58,7 +55,9 @@ const attachListeners = (window) => {
 
 		const m = segments.find((x) => {
 			try {
-				return pattern.test(x)
+				new URL(x, window.location.href)
+
+				return /\S\.\S/.test(x)
 			} catch {
 				return false
 			}
@@ -82,24 +81,6 @@ const attachListeners = (window) => {
 		} else {
 			container.remove()
 		}
-
-		mouseMoveHandler(e)
-	}
-
-	function mouseMoveHandler(e) {
-		if (
-			!(e.target instanceof window.HTMLElement) ||
-			e.target.childNodes.length !== 1
-		) {
-			return
-		}
-
-		const { width, height } = container.dataset
-
-		if (width == null || height == null) return
-
-		container.style.top = '0'
-		container.style.right = '0'
 	}
 
 	const escHandler = (e) => {
@@ -109,7 +90,6 @@ const attachListeners = (window) => {
 	}
 
 	window.document.body.addEventListener('mouseover', hoverHandler)
-	window.document.body.addEventListener('mousemove', mouseMoveHandler)
 
 	window.addEventListener('keydown', escHandler)
 	window.addEventListener('blur', escHandler, true)

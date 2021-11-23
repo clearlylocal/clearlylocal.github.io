@@ -1,7 +1,7 @@
 ---
 title: Memsource Image on Hover
 namespace: https://www.clearlyloc.com/
-version: 0.1
+version: 0.2
 description: Show images when hovering over image URLs on Memsource
 author: lionel.rowe@clearlyloc.com
 match: https://*.memsource.com/*
@@ -10,3 +10,6 @@ grant: none
 ---
 
 ![Memsource Image on Hover extension](/assets/img/biu-biu-smol.gif)
+
+<!-- uncomment for testing: -->
+<!-- <a href="/assets/img/Logo-cllc.png">Hover me</a> -->
