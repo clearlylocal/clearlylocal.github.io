@@ -11,6 +11,7 @@ layout: default
 	| split: "/"
 	| last
 	| replace: ".md", ".js"
+	| relative_url
 %}
 
 {% assign last_path_segment_bare = page.url
@@ -28,6 +29,7 @@ layout: default
 
 {% assign url = page.url
 	| replace: last_path_segment_bare, user_script_path
+	| relative_url
 %}
 
 {% capture js %}{% include_relative {{ url_plain }} %}{% endcapture %}

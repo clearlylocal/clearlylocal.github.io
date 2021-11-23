@@ -2,20 +2,25 @@
 // @name         Memsource Image on Hover
 // @namespace    https://www.clearlyloc.com/
 // @version      0.1
-// @description  Show images when hovering over image URLs
+// @description  Show images when hovering over image URLs on Memsource
 // @author       lionel.rowe@clearlyloc.com
 // @match        https://*.memsource.com/*
 // @icon         https://www.clearlyloc.com/favicon/favicon-32x32.png?v=8jMmgN8eLE
 // @grant        none
-// @updateURL    https://clearlylocal.github.io/user_scripts/js/memsource_image_on_hover.user.js
-// @downloadURL  https://clearlylocal.github.io/user_scripts/js/memsource_image_on_hover.user.js
+// @updateURL    https://clearlylocal.github.io/userscripts/js/memsource-image-on-hover.user.js
+// @downloadURL  https://clearlylocal.github.io/userscripts/js/memsource-image-on-hover.user.js
 // ==/UserScript==
 
 const extensions = ['jpg', 'jpeg', 'jp2', 'png', 'webp', 'gif', 'svg']
 const container = document.createElement('div')
 const img = document.createElement('img')
 
-container.style.cssText = Object.entries({
+const toCssText = (obj) =>
+	Object.entries(obj)
+		.map(([k, v]) => `${k}: ${v} !important;`)
+		.join(' ')
+
+container.style.cssText = toCssText({
 	position: 'fixed',
 	border: '1px solid #ddd',
 	filter: 'drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2))',
@@ -25,9 +30,15 @@ container.style.cssText = Object.entries({
 	'pointer-events': 'none',
 	'z-index': Number.MAX_SAFE_INTEGER,
 	background: 'aquamarine',
+	'max-width': '50%',
+	'max-height': '80%',
 })
-	.map(([k, v]) => `${k}: ${v} !important;`)
-	.join(' ')
+
+img.style.cssText = toCssText({
+	background: '#fff',
+	'max-width': '100%',
+	'max-height': '100%',
+})
 
 container.appendChild(img)
 

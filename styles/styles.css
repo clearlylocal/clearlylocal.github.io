@@ -63,3 +63,26 @@ a,
 a:visited {
 	color: var(--color-primary-darker);
 }
+
+.site-title {
+	height: 2.05em;
+	display: flex;
+	align-items: center;
+	text-decoration: none !important;
+	position: relative;
+	left: -10px;
+}
+
+.site-title img {
+	height: 1.7em;
+}
+
+.site-title span {
+	height: 2.05em;
+}
+
+@media screen and (max-width: 600px) {
+	.site-title span {
+		display: none;
+	}
+}

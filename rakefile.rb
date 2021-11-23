@@ -46,7 +46,7 @@ task :populate do
 end
 
 task :user_scripts do
-	dir = './user_scripts'
+	dir = './userscripts'
 
 	scripts = Dir.entries(dir)
 		.filter { |x| x =~ /[^.]/ }

@@ -7,8 +7,8 @@
 // @match        https://*.lokalise.com/*
 // @icon         https://www.clearlyloc.com/favicon/favicon-32x32.png?v=8jMmgN8eLE
 // @grant        none
-// @updateURL    https://clearlylocal.github.io/user_scripts/js/lokalise_scraper.user.js
-// @downloadURL  https://clearlylocal.github.io/user_scripts/js/lokalise_scraper.user.js
+// @updateURL    https://clearlylocal.github.io/userscripts/js/lokalise-scraper.user.js
+// @downloadURL  https://clearlylocal.github.io/userscripts/js/lokalise-scraper.user.js
 // ==/UserScript==
 
 const running = Symbol('running')

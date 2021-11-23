@@ -60,11 +60,11 @@ kramdown:
 permalink: /:categories/:title
 
 header_pages:
-    - user_scripts/index.md
+    - userscripts/index.md
     - about.md
 
 defaults:
     - scope:
-          path: 'user_scripts'
+          path: 'userscripts'
       values:
-          layout: 'user_script'
+          layout: 'userscript'
