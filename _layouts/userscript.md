@@ -3,9 +3,10 @@ layout: default
 ---
 
 <article class="post">
-    <header class="post-header">
-        <h1 class="page-heading">Userscript: {{ page.title }}</h1>
-    </header>
+
+<header class="post-header">
+	<h1 class="page-heading">Userscript: {{ page.title }}</h1>
+</header>
 
 {% assign url_plain = page.path
 	| split: "/"
@@ -50,7 +51,7 @@ There are two options for installation: userscript manager (recommended) or book
 
 1. Install a userscript manager, such as [Tampermonkey](https://www.tampermonkey.net/).
 2. Open **[{{last_path_segment}}]({{url}})**.
-3. Follow the instructions in your userscript manager to install or update.
+3. Click "Install", "Update", or "Reinstall", or otherwise follow the instructions in your userscript manager as required.
 
 ### Bookmarklet
 
