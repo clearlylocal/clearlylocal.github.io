@@ -45,6 +45,10 @@ task :populate do
 	end
 end
 
+def fmt(k, v)
+	["// @#{k == 'title' ? 'name' : k}".ljust(16, ' '), v].join ' '
+end
+
 task :user_scripts do
 	dir = './userscripts'
 
@@ -71,7 +75,9 @@ task :user_scripts do
 			k = x.first
 			v = x.last
 
-			["// @#{k == 'title' ? 'name' : k}".ljust(16, ' '), v].join ' '
+			v.kind_of?(Array) ?
+				v.map { |v| fmt(k, v) } .join("\n") :
+				fmt(k, v)
 		end
 			.to_a
 			.join "\n"
