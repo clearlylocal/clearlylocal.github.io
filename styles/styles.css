@@ -86,3 +86,16 @@ a:visited {
 		display: none;
 	}
 }
+
+summary {
+	cursor: pointer;
+}
+
+summary::marker {
+	display: inline;
+}
+
+summary h2, summary h3 {
+	display: inline;
+	padding-left: .5em;
+}

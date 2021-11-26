@@ -47,13 +47,28 @@ layout: default
 
 There are two options for installation: userscript manager (recommended) or bookmarklet.
 
+<details markdown="1" open>
+
+<summary markdown="1">
+
 ### Userscript manager (recommended)
 
+</summary>
+
 1. Install a userscript manager, such as [Tampermonkey](https://www.tampermonkey.net/).
-2. Open **[{{last_path_segment}}]({{url}})**.
-3. Click "Install", "Update", or "Reinstall", or otherwise follow the instructions in your userscript manager as required.
+2. Restart your browser and re-open this page.
+3. Open **[{{last_path_segment}}]({{url}})**.
+4. Click "Install", "Update", or "Reinstall", or otherwise follow the instructions in your userscript manager as required.
+
+</details>
+
+<details markdown="1">
+
+<summary markdown="1">
 
 ### Bookmarklet
+
+</summary>
 
 1. Drag the following link onto your [bookmarks bar](https://www.howtogeek.com/415733/how-to-show-or-hide-the-google-chrome-bookmarks-bar/):
     - **[{{page.title}}](javascript:{{ js_wrapped | url_encode | replace: "+", "%20" }})**
@@ -61,8 +76,28 @@ There are two options for installation: userscript manager (recommended) or book
 
 You'll need to click it again for each page load. Note that you must manually re-install to apply any updates if you use the bookmarklet method.
 
+</details>
+
 {% endcapture %}
 
 {{ markdown | markdownify }}
 
 </article>
+
+<script>
+document.body.addEventListener('click', e => {
+	const d = e.target.closest('details')
+
+	if (d) {
+		const prevState = d.open
+
+		for (const el of document.querySelectorAll('details')) {
+			if (el !== d) {
+				el.open = false
+			}
+
+			// else handled natively
+		}
+	}
+})
+</script>
