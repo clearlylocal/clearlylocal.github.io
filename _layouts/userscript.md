@@ -55,10 +55,10 @@ There are two options for installation: userscript manager (recommended) or book
 
 </summary>
 
-1. Install a userscript manager, such as [Tampermonkey](https://www.tampermonkey.net/).
-2. Restart your browser and re-open this page.
-3. Open **[{{last_path_segment}}]({{url}})**.
-4. Click "Install", "Update", or "Reinstall", or otherwise follow the instructions in your userscript manager as required.
+1. Install a userscript manager, such as [Tampermonkey](https://www.tampermonkey.net/){:target="_blank"}{:rel="noopener noreferrer"}.
+1. Open **[{{last_path_segment}}]({{url}})**.
+	- If this doesn't open in the newly-installed userscript manager, you may need to restart your browser.
+1. Click "Install", "Update", or "Reinstall", or otherwise follow the instructions in your userscript manager as required.
 
 </details>
 
