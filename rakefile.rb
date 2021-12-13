@@ -32,7 +32,7 @@ task :populate do
 				'description' => x['description'],
 				'repo_url' => x['html_url'],
 				'pages_url' => x['has_pages'] ? "https://#{org}.github.io/#{x['name']}" : nil,
-				'updated_at' => x['updated_at']
+				'updated_at' => x['pushed_at']
 			}
 		end
 

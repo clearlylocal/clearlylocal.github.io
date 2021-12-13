@@ -3,35 +3,50 @@
   description: JS/TS regexes with whitespace, comments, and interpolation!
   repo_url: https://github.com/clearlylocal/fancy-regex
   pages_url: 
-  updated_at: '2021-03-05T21:45:25Z'
+  updated_at: '2021-02-01T02:02:33Z'
 - title: browser-extension-url-match
   description: Robust, configurable URL pattern matching, as used by Chrome and Firefox
     browser extensions.
   repo_url: https://github.com/clearlylocal/browser-extension-url-match
   pages_url: 
-  updated_at: '2021-08-07T08:49:58Z'
+  updated_at: '2021-02-03T14:10:00Z'
 - title: untranslated-detector
   description: 
   repo_url: https://github.com/clearlylocal/untranslated-detector
   pages_url: https://clearlylocal.github.io/untranslated-detector
-  updated_at: '2021-05-24T15:21:34Z'
+  updated_at: '2022-07-21T03:30:55Z'
 - title: subtitle-concatenator
   description: 
   repo_url: https://github.com/clearlylocal/subtitle-concatenator
   pages_url: https://clearlylocal.github.io/subtitle-concatenator
-  updated_at: '2021-08-27T00:25:13Z'
+  updated_at: '2021-08-27T00:25:11Z'
 - title: jekyll-doc-basic-demo
   description: 
   repo_url: https://github.com/clearlylocal/jekyll-doc-basic-demo
   pages_url: https://clearlylocal.github.io/jekyll-doc-basic-demo
-  updated_at: '2021-07-22T08:08:02Z'
+  updated_at: '2021-07-22T08:05:41Z'
 - title: text-fragment-editor
   description: 
   repo_url: https://github.com/clearlylocal/text-fragment-editor
   pages_url: https://clearlylocal.github.io/text-fragment-editor
-  updated_at: '2021-08-10T21:19:32Z'
+  updated_at: '2021-08-10T21:19:37Z'
 - title: substitute-variations
   description: 
   repo_url: https://github.com/clearlylocal/substitute-variations
   pages_url: https://clearlylocal.github.io/substitute-variations
-  updated_at: '2021-09-01T01:08:36Z'
+  updated_at: '2022-01-25T19:35:32Z'
+- title: academy-article-qa
+  description: 
+  repo_url: https://github.com/clearlylocal/academy-article-qa
+  pages_url: https://clearlylocal.github.io/academy-article-qa
+  updated_at: '2022-02-22T20:13:15Z'
+- title: email-signature
+  description: 
+  repo_url: https://github.com/clearlylocal/email-signature
+  pages_url: https://clearlylocal.github.io/email-signature
+  updated_at: '2022-05-31T22:40:06Z'
+- title: excel-word-counter
+  description: 
+  repo_url: https://github.com/clearlylocal/excel-word-counter
+  pages_url: https://clearlylocal.github.io/excel-word-counter
+  updated_at: '2022-08-31T21:00:33Z'
