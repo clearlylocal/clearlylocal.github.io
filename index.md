@@ -1,7 +1,3 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
-title: Public Repositories
+redirect_to: https://cl-tools.deno.dev/cl/portal
 ---
